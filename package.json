@@ -1,0 +1,29 @@
+{
+  "name": "practice-1",
+  "version": "1.0.0",
+  "description": "a basic app to deploy",
+  "keywords": [
+    "node"
+  ],
+  "homepage": "https://github.com/raheemkhan12345/backend-practice#readme",
+  "bugs": {
+    "url": "https://github.com/raheemkhan12345/backend-practice/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raheemkhan12345/backend-practice.git"
+  },
+  "license": "ISC",
+  "author": "AbdulRahim",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "env": "^0.0.2",
+    "express": "^5.2.1"
+  }
+}
