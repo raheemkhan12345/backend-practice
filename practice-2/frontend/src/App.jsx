@@ -1,0 +1,39 @@
+import { useState, useEffect } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from './assets/vite.svg'
+import heroImg from './assets/hero.png'
+import './App.css'
+import axios from 'axios'
+
+function App() {
+ const [joke, setJoke] = useState([]);
+
+ useEffect(() => {
+    axios.get('api/jokes')
+    .then((response) => {
+      setJoke(response.data);
+    })
+    .catch((error) => {
+      console.log(error);
+    })
+ })
+
+  return (
+    <>
+    <h1>chai aur rahim</h1>
+    <p>JOKES: {joke.length}</p>
+    {
+      joke.map((joke) => {
+        return (
+          <div key={joke.id}>
+            <h1>{joke.title}</h1>
+            <p>{joke.content}</p>
+          </div>
+        )
+      })
+    }
+    </>
+  )
+}
+
+export default App
