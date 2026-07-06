@@ -26,7 +26,7 @@ function App() {
       joke.map((joke) => {
         return (
           <div key={joke.id}>
-            <h1>{joke.title}</h1>
+            <h3>{joke.title}</h3>
             <p>{joke.content}</p>
           </div>
         )
