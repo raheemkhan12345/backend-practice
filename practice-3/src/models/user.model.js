@@ -1,4 +1,4 @@
-import mongoose, {Schema} from 'mongoose';
+import mongoose, { Schema } from 'mongoose';
 
 const userSchema = new mongoose.Schema(
     {
@@ -11,9 +11,9 @@ const userSchema = new mongoose.Schema(
             index: true
         },
         email: {
-            type: String, 
+            type: String,
             required: true,
-            unique: true, 
+            unique: true,
             trim: true,
             lowercase: true,
 
@@ -28,7 +28,7 @@ const userSchema = new mongoose.Schema(
         avatar: {
             type: String,
             required: true,
-            
+
         },
         coverImage: {
             type: String,
@@ -43,9 +43,12 @@ const userSchema = new mongoose.Schema(
         },
         refreshToken: {
             type: String,
-        }
+        },
 
+    },
+    {
+        timestamps: true,
     }
-) 
+)
 
 export const User = mongoose.model('User', userSchema);
